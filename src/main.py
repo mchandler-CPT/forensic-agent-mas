@@ -5,6 +5,7 @@ from src.common.event_bus import EventBus
 from src.agents.collector import CollectorAgent
 from src.agents.processor import ProcessorAgent
 from src.agents.reporter import ReporterAgent
+from src.agents.vault import VaultAgent
 
 # Configure professional logging using our centralized Config
 logging.basicConfig(level=logging.INFO, format=Config.LOG_FORMAT)
@@ -33,6 +34,8 @@ def main():
     
     processor = ProcessorAgent(bus)
     reporter = ReporterAgent(bus, report_path=Config.REPORT_PATH)
+    vault_path = Config.ROOT_DIR / "data" / "evidence_vault"
+    vault = VaultAgent(bus, vault_path)
     
     # 4. Wire Up The Forensic Pipeline
     # Trigger 1: Collector -> Processor (Handoff for Integrity Verification)
@@ -40,6 +43,7 @@ def main():
     
     # Trigger 2: Processor -> Reporter (Handoff for Evidence Archiving)
     bus.subscribe("FILE_PROCESSED", reporter.record_evidence)
+    bus.subscribe("FILE_PROCESSED", vault.archive_file)
     
     print("\n" + "="*60)
     print("  AUTONOMOUS FORENSIC PIPELINE: ACTIVE")
