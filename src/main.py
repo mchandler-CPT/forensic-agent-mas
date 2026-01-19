@@ -25,7 +25,12 @@ def main():
     
     # 3. Instantiate Intelligent Agents
     # Each agent is a BDI entity with specific forensic responsibilities.
-    collector = CollectorAgent(bus, Config.INPUT_DIR)
+    collector = CollectorAgent(
+        bus, 
+        Config.INPUT_DIR, 
+        manifest_path=Config.REPORT_PATH
+    )
+    
     processor = ProcessorAgent(bus)
     reporter = ReporterAgent(bus, report_path=Config.REPORT_PATH)
     
