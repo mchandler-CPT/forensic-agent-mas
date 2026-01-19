@@ -1,17 +1,5 @@
-Timestamp,File_Name,SHA256_Hash,Full_Path
-2026-01-17 12:26:44.740779,2X2.json,bb9eddef5d12bf0a1342f746b606e0765d43c803583949556dee023ff4c7bad1,data\input\2X2.json
-2026-01-17 12:28:46.260874,2X2.json,bb9eddef5d12bf0a1342f746b606e0765d43c803583949556dee023ff4c7bad1,data\input\2X2.json
-2026-01-17 12:29:52.107357,2X2.json,bb9eddef5d12bf0a1342f746b606e0765d43c803583949556dee023ff4c7bad1,C:\DevProjects\digital_forensics_mas\data\input\2X2.json
-2026-01-17 12:30:52.117535,api.py,0d30e4557f5d6d0130e94f46bc380374e8c8c368a1ad312eb32021ef3e1290ad,C:\DevProjects\digital_forensics_mas\data\input\api.py
-2026-01-17 12:31:02.121767,talf-mlsa.pdf,6b1aab3c1fe7545ad0431d2b6e03e548ed904dcda0c73883dc940e14d797cc85,C:\DevProjects\digital_forensics_mas\data\input\talf-mlsa.pdf
-2026-01-17 12:33:27.050999,2X2.json,9cc4b0667de7f45ce48279ec32d739ea645ba5295c14fa830d66beeb010f3f87,C:\DevProjects\digital_forensics_mas\data\input\2X2.json
-2026-01-17 12:33:27.055858,api.py,0d30e4557f5d6d0130e94f46bc380374e8c8c368a1ad312eb32021ef3e1290ad,C:\DevProjects\digital_forensics_mas\data\input\api.py
-2026-01-17 12:33:27.058183,talf-mlsa.pdf,6b1aab3c1fe7545ad0431d2b6e03e548ed904dcda0c73883dc940e14d797cc85,C:\DevProjects\digital_forensics_mas\data\input\talf-mlsa.pdf
-2026-01-19 09:53:00.199194,2X2.json,9cc4b0667de7f45ce48279ec32d739ea645ba5295c14fa830d66beeb010f3f87,C:\DevProjects\digital_forensics_mas\data\input\2X2.json
-2026-01-19 09:53:00.257479,api.py,0d30e4557f5d6d0130e94f46bc380374e8c8c368a1ad312eb32021ef3e1290ad,C:\DevProjects\digital_forensics_mas\data\input\api.py
-2026-01-19 09:53:00.259374,embeddings.py,4b2d38a550add63c995f4031ebc0c0ed431b4245b46e1460bf01164793c49dfe,C:\DevProjects\digital_forensics_mas\data\input\embeddings.py
-2026-01-19 09:53:00.261922,talf-mlsa.pdf,6b1aab3c1fe7545ad0431d2b6e03e548ed904dcda0c73883dc940e14d797cc85,C:\DevProjects\digital_forensics_mas\data\input\talf-mlsa.pdf
-2026-01-19 09:53:29.853335,2X2.json,9cc4b0667de7f45ce48279ec32d739ea645ba5295c14fa830d66beeb010f3f87,C:\DevProjects\digital_forensics_mas\data\input\2X2.json
-2026-01-19 09:53:29.858670,api.py,0d30e4557f5d6d0130e94f46bc380374e8c8c368a1ad312eb32021ef3e1290ad,C:\DevProjects\digital_forensics_mas\data\input\api.py
-2026-01-19 09:53:29.860560,embeddings.py,4b2d38a550add63c995f4031ebc0c0ed431b4245b46e1460bf01164793c49dfe,C:\DevProjects\digital_forensics_mas\data\input\embeddings.py
-2026-01-19 09:53:29.862921,talf-mlsa.pdf,6b1aab3c1fe7545ad0431d2b6e03e548ed904dcda0c73883dc940e14d797cc85,C:\DevProjects\digital_forensics_mas\data\input\talf-mlsa.pdf
+Timestamp,Processing_Agent,File_Name,SHA256_Hash,Hash_Type,File_Size_Bytes,Full_Path
+2026-01-19 14:44:51,ReporterAgent,2X2.json,9cc4b0667de7f45ce48279ec32d739ea645ba5295c14fa830d66beeb010f3f87,SHA-256,3257549,C:\DevProjects\digital_forensics_mas\data\input\2X2.json
+2026-01-19 14:44:51,ReporterAgent,api.py,0d30e4557f5d6d0130e94f46bc380374e8c8c368a1ad312eb32021ef3e1290ad,SHA-256,12939,C:\DevProjects\digital_forensics_mas\data\input\api.py
+2026-01-19 14:44:51,ReporterAgent,embeddings.py,4b2d38a550add63c995f4031ebc0c0ed431b4245b46e1460bf01164793c49dfe,SHA-256,2605,C:\DevProjects\digital_forensics_mas\data\input\embeddings.py
+2026-01-19 14:44:51,ReporterAgent,talf-mlsa.pdf,6b1aab3c1fe7545ad0431d2b6e03e548ed904dcda0c73883dc940e14d797cc85,SHA-256,657142,C:\DevProjects\digital_forensics_mas\data\input\talf-mlsa.pdf
