@@ -1,10 +1,14 @@
-2026-01-19 15:31:50,898 - CollectorAgent - INFO - Agent CollectorAgent initialized with BDI state.
-2026-01-19 15:31:50,899 - ProcessorAgent - INFO - Agent ProcessorAgent initialized with BDI state.
-2026-01-19 15:31:50,900 - ReporterAgent - INFO - Agent ReporterAgent initialized with BDI state.
-2026-01-19 15:31:50,900 - VaultAgent - INFO - Agent VaultAgent initialized with BDI state.
-2026-01-19 15:31:50,901 - Orchestrator - INFO - System Startup: Forensic pipeline initialized and agents online.
-2026-01-19 15:31:50,902 - CollectorAgent - INFO - New evidence discovered: build_index.py
-2026-01-19 15:31:50,902 - ProcessorAgent - INFO - Hashing evidence for integrity: build_index.py
-2026-01-19 15:31:50,906 - ReporterAgent - INFO - Chain of custody updated: build_index.py
-2026-01-19 15:31:50,908 - VaultAgent - INFO - Verified: build_index.py copied to C:\DevProjects\digital_forensics_mas\data\evidence_vault
-2026-01-19 15:32:10,765 - Orchestrator - WARNING - Shutdown signal detected. Finalizing audit logs.
+2026-01-19 23:16:16,543 - CollectorAgent - INFO - Agent CollectorAgent initialized with BDI state.
+2026-01-19 23:16:16,544 - ProcessorAgent - INFO - Agent ProcessorAgent initialized with BDI state.
+2026-01-19 23:16:16,544 - ReporterAgent - INFO - Agent ReporterAgent initialized with BDI state.
+2026-01-19 23:16:16,545 - VaultAgent - INFO - Agent VaultAgent initialized with BDI state.
+2026-01-19 23:16:16,547 - Orchestrator - INFO - System Startup: Forensic pipeline initialized and agents online.
+2026-01-19 23:17:16,552 - CollectorAgent - INFO - New evidence discovered: main.py
+2026-01-19 23:17:16,552 - ProcessorAgent - INFO - Hashing evidence for integrity: main.py
+2026-01-19 23:17:16,559 - ReporterAgent - INFO - Chain of custody updated: main.py
+2026-01-19 23:17:16,561 - VaultAgent - INFO - Verified: main.py copied to C:\DevProjects\digital_forensics_mas\data\evidence_vault
+2026-01-19 23:17:16,562 - CollectorAgent - INFO - New evidence discovered: __init__.py
+2026-01-19 23:17:16,562 - ProcessorAgent - INFO - Hashing evidence for integrity: __init__.py
+2026-01-19 23:17:16,564 - ReporterAgent - INFO - Chain of custody updated: __init__.py
+2026-01-19 23:17:16,565 - VaultAgent - INFO - Verified: __init__.py copied to C:\DevProjects\digital_forensics_mas\data\evidence_vault
+2026-01-19 23:35:32,337 - Orchestrator - WARNING - Shutdown signal detected. Finalizing audit logs.

@@ -17,7 +17,7 @@ def get_agent_logger(agent_name):
     log_dir.mkdir(parents=True, exist_ok=True)
     log_file = log_dir / "agent_system.log"
     
-    # Debug: This will show up in your PowerShell immediately
+    # This will show up in PowerShell immediately
     print(f"[*] {agent_name} initializing audit trail at: {log_file}")
     
     try:

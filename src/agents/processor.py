@@ -16,7 +16,7 @@ class ProcessorAgent(BaseAgent):
         # BDI Intention
         self.intention = f"hashing_{file_path.name}"
         
-        # ADD THIS LINE: Explicit logging so you see it in the console
+        # Explicit logging so you see it in the console
         self.logger.info(f"Hashing evidence for integrity: {file_path.name}")
         
         try:

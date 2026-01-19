@@ -1,2 +1,3 @@
 Timestamp,Processing_Agent,File_Name,SHA256_Hash,Hash_Type,File_Size_Bytes,Full_Path
-2026-01-19 15:31:50,ReporterAgent,build_index.py,817cd38cd383d21e017acfea7ffb69f3049ea69f0aa664d938f1a65daa14d5d5,SHA-256,1767,C:\DevProjects\digital_forensics_mas\data\input\build_index.py
+2026-01-19 23:17:16,ReporterAgent,main.py,3c4f356009560dea65b2555128ad3e3133fec0bc1b31894b49367e6977565975,SHA-256,2714,C:\DevProjects\digital_forensics_mas\data\input\main.py
+2026-01-19 23:17:16,ReporterAgent,__init__.py,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,SHA-256,0,C:\DevProjects\digital_forensics_mas\data\input\__init__.py

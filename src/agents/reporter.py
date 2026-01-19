@@ -24,7 +24,7 @@ class ReporterAgent(BaseAgent):
         """
         self.intention = f"logging_{data['path'].name}"
         
-        # PRO-GRADE: Expanded metadata for the MSc 'Chain of Custody' requirement
+        # Expanded metadata for the MSc 'Chain of Custody' requirement
         new_record = pd.DataFrame([{
             'Timestamp': pd.Timestamp.now().strftime("%Y-%m-%d %H:%M:%S"),
             'Processing_Agent': self.name,

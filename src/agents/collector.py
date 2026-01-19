@@ -14,7 +14,7 @@ class CollectorAgent(BaseAgent):
         self.beliefs['seen_files'] = set()
         self.desires.append("discover_new_evidence")
         
-        # PRO-GRADE: Load history to prevent redundant scanning
+        # Load history to prevent redundant scanning
         self._load_existing_beliefs()
 
     def _load_existing_beliefs(self):
@@ -45,4 +45,12 @@ class CollectorAgent(BaseAgent):
         
         self.intention = "idle"
 
-    def perceive(self): pass
+    def perceive(self):
+        self.logger.info(f"{self.name} is scanning environment...")
+        
+        # Ensure scan_input_directory actually returns a list of Path objects
+        # If scan_input_directory is just a wrapper for Path.glob, return it directly.
+        files = list(self.watch_dir.glob("*"))
+        
+        # UPDATE: Returning the files list for the BDI loop and Unit Tests
+        return files

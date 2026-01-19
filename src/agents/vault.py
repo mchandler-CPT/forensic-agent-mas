@@ -24,7 +24,7 @@ class VaultAgent(BaseAgent):
             # copy2 preserves metadata (timestamps), vital for forensics
             shutil.copy2(str(source_path), str(destination_path))
             
-            # PRO-GRADE: Verification check
+            # Verification check
             if destination_path.exists():
                 self.beliefs['total_vaulted'] += 1
                 self.logger.info(f"Verified: {source_path.name} copied to {self.vault_dir}")

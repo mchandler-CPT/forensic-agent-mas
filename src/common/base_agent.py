@@ -4,7 +4,6 @@ from src.common.logger import get_agent_logger
 class BaseAgent(ABC):
     def __init__(self, name):
         self.name = name
-        # Distinction Move: Centralized logger inherited by all agents
         self.logger = get_agent_logger(self.name)
         
         self.beliefs = {}

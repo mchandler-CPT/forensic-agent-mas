@@ -36,7 +36,7 @@ def main():
     processor = ProcessorAgent(bus)
     reporter = ReporterAgent(bus, report_path=Config.REPORT_PATH)
     
-    # Pathing: Ensuring the vault resides within the data boundary
+    # Professional Pathing: Ensuring the vault resides within the data boundary
     vault_path = Config.ROOT_DIR / "data" / "evidence_vault"
     vault = VaultAgent(bus, vault_path)
     
