@@ -1,55 +1,46 @@
 import time
 import logging
-from pathlib import Path
+from src.common.config import ForensicConfig as Config
 from src.common.event_bus import EventBus
 from src.agents.collector import CollectorAgent
 from src.agents.processor import ProcessorAgent
 from src.agents.reporter import ReporterAgent
 
-# Configure logging to show the 'Hand-off' between agents
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
+# Use the centralized log format
+logging.basicConfig(level=logging.INFO, format=Config.LOG_FORMAT)
 
 def main():
-    # 1. Infrastructure Setup
+    # 1. Setup Infrastructure
     bus = EventBus()
     
-    # Define environment - using absolute paths for the demo
-    base_path = Path(__file__).parent.parent
-    source_dir = base_path / "data" / "input"
-    report_file = base_path / "data" / "output" / "forensic_manifest.csv"
+    # 2. Ensure Environment Readiness
+    # This fulfills the 'Production Readiness' requirement
+    Config.INPUT_DIR.mkdir(parents=True, exist_ok=True)
+    Config.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     
-    source_dir.mkdir(parents=True, exist_ok=True)
-    report_file.parent.mkdir(parents=True, exist_ok=True)
-    
-    # 2. Agent Initialization
-    collector = CollectorAgent(bus, source_dir)
+    # 3. Instantiate Agents using Config settings
+    collector = CollectorAgent(bus, Config.INPUT_DIR)
     processor = ProcessorAgent(bus)
-    reporter = ReporterAgent(bus, report_path=report_file)
+    reporter = ReporterAgent(bus, report_path=Config.REPORT_PATH)
     
-    # 3. The Forensic Pipeline (Observer Pattern)
-    # Step A: When Collector finds a file, Processor is notified to hash it
+    # 4. Wire Up Subscriptions
     bus.subscribe("FILE_FOUND", processor.process_file)
-    
-    # Step B: When Processor finishes hashing, Reporter is notified to archive it
     bus.subscribe("FILE_PROCESSED", reporter.record_evidence)
     
     print("\n" + "="*60)
-    print("  AUTONOMOUS FORENSIC PIPELINE ACTIVE")
-    print(f"  TARGET: {source_dir}")
-    print(f"  LOG:    {report_file}")
+    print("  PRO-GRADE FORENSIC MAS STARTUP")
+    print(f"  TARGET: {Config.INPUT_DIR}")
+    print(f"  LOG:    {Config.REPORT_PATH}")
     print("="*60 + "\n")
     
     try:
         while True:
-            # The BDI 'Heartbeat' - Collector perceives and acts
+            # The BDI 'Heartbeat'
             collector.act()
-            time.sleep(10) 
+            time.sleep(Config.POLLING_INTERVAL)
             
     except KeyboardInterrupt:
-        print("\n[!] Shutdown signal received. Closing forensic logs.")
+        print("\n[!] Shutdown sequence initiated. Closing forensic logs.")
 
 if __name__ == "__main__":
     main()
