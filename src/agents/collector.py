@@ -1,6 +1,7 @@
 import pandas as pd
 from pathlib import Path
 from src.common.base_agent import BaseAgent
+from src.common.logger import get_agent_logger
 
 class CollectorAgent(BaseAgent):
     def __init__(self, event_bus, watch_dir, manifest_path="data/output/forensic_manifest.csv"):

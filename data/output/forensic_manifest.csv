@@ -1,5 +1,2 @@
 Timestamp,Processing_Agent,File_Name,SHA256_Hash,Hash_Type,File_Size_Bytes,Full_Path
-2026-01-19 15:15:57,ReporterAgent,2X2.json,9cc4b0667de7f45ce48279ec32d739ea645ba5295c14fa830d66beeb010f3f87,SHA-256,3257549,C:\DevProjects\digital_forensics_mas\data\input\2X2.json
-2026-01-19 15:15:57,ReporterAgent,api.py,0d30e4557f5d6d0130e94f46bc380374e8c8c368a1ad312eb32021ef3e1290ad,SHA-256,12939,C:\DevProjects\digital_forensics_mas\data\input\api.py
-2026-01-19 15:15:57,ReporterAgent,embeddings.py,4b2d38a550add63c995f4031ebc0c0ed431b4245b46e1460bf01164793c49dfe,SHA-256,2605,C:\DevProjects\digital_forensics_mas\data\input\embeddings.py
-2026-01-19 15:15:57,ReporterAgent,talf-mlsa.pdf,6b1aab3c1fe7545ad0431d2b6e03e548ed904dcda0c73883dc940e14d797cc85,SHA-256,657142,C:\DevProjects\digital_forensics_mas\data\input\talf-mlsa.pdf
+2026-01-19 15:31:50,ReporterAgent,build_index.py,817cd38cd383d21e017acfea7ffb69f3049ea69f0aa664d938f1a65daa14d5d5,SHA-256,1767,C:\DevProjects\digital_forensics_mas\data\input\build_index.py

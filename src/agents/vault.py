@@ -2,6 +2,7 @@ import shutil
 import os
 from pathlib import Path
 from src.common.base_agent import BaseAgent
+from src.common.logger import get_agent_logger
 
 class VaultAgent(BaseAgent):
     def __init__(self, event_bus, vault_dir):
@@ -11,6 +12,7 @@ class VaultAgent(BaseAgent):
         self.vault_dir = Path(vault_dir).resolve()
         self.vault_dir.mkdir(parents=True, exist_ok=True)
         self.beliefs['total_vaulted'] = 0
+        self.logger = get_agent_logger(self.name)
 
     def archive_file(self, data):
         source_path = Path(data['path']).resolve()

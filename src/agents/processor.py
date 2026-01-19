@@ -1,5 +1,6 @@
 import hashlib
 from src.common.base_agent import BaseAgent
+from src.common.logger import get_agent_logger
 
 class ProcessorAgent(BaseAgent):
     """
